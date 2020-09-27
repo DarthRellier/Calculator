@@ -5,12 +5,12 @@ var hasUsedJavascript = false;
 function appendNumber(number) {
   if (hasUsedJavascript == false) {
     let output = document.getElementById("output");
-    output.innerText = number;
+    output.innerHTML = number;
     noShowNumbers += number;
     hasUsedJavascript = true;
   } else {
     let output = document.getElementById("output");
-    output.innerText += number;
+    output.innerHTML += number;
     noShowNumbers += number;
   }
 }
@@ -21,7 +21,7 @@ function appendOp(op) {
 
 function equalFunc() {
   let evaluatedNumbers = eval(noShowNumbers);
-  output.innerText = evaluatedNumbers;
+  output.innerHTML = evaluatedNumbers;
 }
 
 function backspace() {
@@ -32,11 +32,11 @@ function backspace() {
     } else if (noShowNumbers.charAt(noShowNumbers.length - 1) == ")") {
       closedPerenNum--;
       noShowNumbers = noShowNumbers.substring(0, noShowNumbers.length - 1);
-    } else if (output.innerText.length > 0) {
+    } else if (output.innerHTML.length > 0) {
       noShowNumbers = noShowNumbers.substring(0, noShowNumbers.length - 1);
-      output.innerText = output.innerText.substring(
+      output.innerHTML = output.innerHTML.substring(
         0,
-        output.innerText.length - 1
+        output.innerHTML.length - 1
       );
     }
   }
@@ -44,7 +44,7 @@ function backspace() {
 
 function clearAll() {
   noShowNumbers = "";
-  output.innerText = "<br>";
+  output.innerHTML = "<br>";
   hasUsedJavascript = false;
   openPerenNum = 0;
   closedPerenNum = 0;
