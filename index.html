@@ -3,51 +3,60 @@
     <title>Calculator</title>
     <script src="calculator.js"></script>
     <style>
-        #container{
-          background-image: linear-gradient(rgba(115, 109, 109, 0.925) grey);
+        #container {
+          background-image: linear-gradient(rgb(174, 168, 168), grey);
+          width: max-content;
+          margin: auto;
+          padding: 10px;
+        }
+        button{
+          border: none;
+          border-radius: 5px;
         }
     </style>
   </head>
   <body>
-      <p id="output">your text will show up here</p>
+    <div id="container">
+      <p id="output"><br></p>
       <table>
-        <div id = "calculator buttons">
-      <tr>
-        <td><button onclick="AppendNumber(1)">1</button></td>
-        <td><button onclick="AppendNumber(2)">2</button></td>
-        <td><button onclick="AppendNumber(3)">3</button></td>
-        <td><button onclick=" AppendDop('+')">+</button></td>
-      </tr>
-      <tr>
-        <td><button onclick="AppendNumber(4)">4</button></td>
-        <td><button onclick="AppendNumber(5)">5</button></td>
-        <td><button onclick="AppendNumber(6)">6</button></td>
-        <td><button onclick=" AppendDop('-')">-</button></td>
-      </tr>
-      <tr>
-        <td><button onclick="AppendNumber(7)">7</button></td>
-        <td><button onclick="AppendNumber(8)">8</button></td>
-        <td><button onclick="AppendNumber(9)">9</button></td>
-        <td><button onclick="AppendNumber(0)">0</button></td>
-      </tr>
-      <tr>
-        <td><button onclick="AppendDop('*')">*</button></td>
-        <td><button onclick="AppendDop('/')">/</button></td>
-        <td><button onclick="AppendDop('**')">^</button></td>
-        <td><button onclick="equalFunc()">=</button></td>
-      </tr>
-    </table>
-    <table>
+        <div id = "calculator-buttons">
         <tr>
-      <td><button onclick="backspace()">backspace</button></td>
-      <td><button onclick="clearAll()">clear</button></td>
-      <td><button onclick="AppendNumber('.')">.</button></td>
-    </tr>
-    <tr>
-        <td><button onclick="Peren('(')">(</button></td>
-        <td><button onclick="Peren(')')">)</button></td>
+          <td><button onclick="appendNumber(1)">1</button></td>
+          <td><button onclick="appendNumber(2)">2</button></td>
+          <td><button onclick="appendNumber(3)">3</button></td>
+          <td><button onclick=" appendOp('+')">+</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="appendNumber(4)">4</button></td>
+          <td><button onclick="appendNumber(5)">5</button></td>
+          <td><button onclick="appendNumber(6)">6</button></td>
+          <td><button onclick=" appendOp('-')">-</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="appendNumber(7)">7</button></td>
+          <td><button onclick="appendNumber(8)">8</button></td>
+          <td><button onclick="appendNumber(9)">9</button></td>
+          <td><button onclick="appendNumber(0)">0</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="appendOp('*')">*</button></td>
+          <td><button onclick="appendOp('/')">/</button></td>
+          <td><button onclick="appendOp('**')">^</button></td>
+          <td><button onclick="equalFunc()">=</button></td>
+        </tr>
+      </table>
+      <table>
+          <tr>
+        <td><button onclick="backspace()">backspace</button></td>
+        <td><button onclick="clearAll()">clear</button></td>
+        <td><button onclick="appendNumber('.')">.</button></td>
+      </tr>
+      <tr>
+          <td><button onclick="peren('(')">(</button></td>
+          <td><button onclick="pweren(')')">)</button></td>
     </tr>
     </table>
-</div>
+  </div>
+  </div>
   </body>
 </html>

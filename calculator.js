@@ -2,11 +2,10 @@ var openPerenNum = 0;
 var closedPerenNum = 0;
 var noShowNumbers = "";
 var hasUsedJavascript = false;
-function AppendNumber(number) {
+function appendNumber(number) {
   if (hasUsedJavascript == false) {
     let output = document.getElementById("output");
-    output.innerText = "";
-    output.innerText += number;
+    output.innerText = number;
     noShowNumbers += number;
     hasUsedJavascript = true;
   } else {
@@ -15,9 +14,8 @@ function AppendNumber(number) {
     noShowNumbers += number;
   }
 }
-function AppendDop(op) {
+function appendOp(op) {
   noShowNumbers += op;
-  output.innerText = "now the next side of your term";
   hasUsedJavascript = false;
 }
 
@@ -46,7 +44,7 @@ function backspace() {
 
 function clearAll() {
   noShowNumbers = "";
-  output.innerText = "your text will show up here";
+  output.innerText = "<br>";
   hasUsedJavascript = false;
   openPerenNum = 0;
   closedPerenNum = 0;
